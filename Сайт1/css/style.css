@@ -1,0 +1,207 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #eee;
+}
+.pieces-slider {
+	position: relative;
+	text-align: center;
+	padding: 8rem 0;
+}
+
+.js .pieces-slider {
+	padding: 0;
+}
+
+/* Make all slides absolutes and hide them */
+.js .pieces-slider__slide {
+	position: absolute;
+	right: 100%;
+}
+
+/* Define image dimensions and also hide them */
+.pieces-slider__image {
+	max-width: 600px;
+	max-height: 400px;
+}
+
+.js .pieces-slider__image {
+	visibility: hidden;
+}
+
+/* Hide the titles */
+.js .pieces-slider__text {
+	text-indent: -9999px;
+}
+
+#btnPodr {
+  display: inline-block;
+  background: #2196f3;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 3px;
+  text-decoration: none;
+  font-family: Tahoma
+  background:#efefef;
+	-webkit-transition: background 1s linear 0s;
+	-moz-transition: background 1s linear 0s;
+	-o-transition: background 1s linear 0s;
+	transition: background 1s linear 0s;
+}
+
+#btnPodr:hover {
+  display: inline-block;
+  background: #c1caca;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 3px;
+  text-decoration: none;
+  font-family: comic sans ms
+}
+.view-ninth .mask-1 .view-ninth .mask-2{
+background-color: rgba(0,0,0,0.5);
+height: 361px;
+width: 361px;
+background: rgba(119,0,36,0.5);
+opacity: 1;
+transition: all 0.3s ease-in-out 0.6s;
+}
+.view-ninth .mask-1 {
+left: auto;
+right: 0px;
+transform: rotate(56.5deg) translateX(-180px);
+transform-origin: 100% 0%;
+}
+.view-ninth .mask-2 {
+top: auto;
+bottom: 0px;
+transform: rotate(56.5deg) translateX(180px);
+transform-origin: 0% 100%;
+}
+.view-ninth .content{
+background: rgba(0,0,0,0.9);
+height: 0px;
+opacity: 0.5;
+width: 361px;
+overflow: hidden;
+transform: rotate(-33.5deg) translate(-112px,166px);
+transform-origin: 0% 100%;
+transition: all 0.4s ease-in-out 0.3s;
+}
+.view-ninth h2{
+background: transparent;
+margin-top: 5px;
+border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.view-ninth a.info{
+display: none;
+}
+.view-ninth:hover .content{
+height: 120px;
+width: 300px;
+opacity: 0.9;
+top: 40px;
+transform: rotate(0deg) translate(0px,0px);
+}
+.view-ninth:hover .mask-1 .view-ninth:hover .mask-2{
+transition-delay: 0s;
+}
+.view-ninth:hover .mask-1{
+transform: rotate(56.5deg) translateX(1px);
+}
+.view-ninth:hover .mask-2 {
+transform: rotate(56.5deg) translateX(-1px);
+}
+/* Canvas with viewport width and height */
+.js .pieces-slider__canvas {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	transition: 0.2s opacity;
+}
+
+/* Class for when we resize */
+.pieces-slider__canvas--hidden {
+	opacity: 0;
+	transition-duration: 0.3s;
+}
+
+/* Navigation buttons */
+.pieces-slider__button {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 100px;
+	height: 100px;
+	margin: -25px 0 0 0;
+	background-color: #c1caca;
+	color: #fff;
+	font-family: inherit;
+	font-weight: bold;
+	border: none;
+	cursor: pointer;
+	transition: 0.1s background-color;
+}
+
+.pieces-slider__button:hover {
+	background: #c1caca;
+}
+
+.pieces-slider__button--next {
+	left: auto;
+	right: 0;
+}
+
+/* Hide the buttons when no JS */
+.no-js .pieces-slider__button {
+	display: none;
+}
+
+/* Media queries with styles for smaller screens */
+@media screen and (max-width: 720px) {
+	.pieces-slider__image {
+		max-width: 300px;
+	}
+}
+
+@media screen and (max-width: 55em) {
+	.pieces-slider__canvas {
+		width: 100vw;
+		height: 100vw;
+	}
+	.pieces-slider__button {
+		width: 60px;
+		height: 60px;
+	}
+}
+
+.about {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #fff;
+}
+
+.about__img {
+  width: 100%;
+}
+
+.info, .news {
+  padding: 100px 0;
+}
+
+.info h2, .news h2 {
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+
+.info-block, .news-block {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+}
